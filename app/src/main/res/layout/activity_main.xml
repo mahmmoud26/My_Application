@@ -1,7 +1,152 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:orientation="vertical"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
 
-</LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#101828"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- 1 - عنوان التطبيق -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DOUANE TEMPORELLE"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#00E5FF"
+            android:gravity="center"
+            android:layout_marginTop="35dp"/>
+
+        <!-- 2 - وصف التطبيق -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contrôle des voyageurs du temps"
+            android:textColor="#B0BEC5"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginBottom="35dp"/>
+
+        <!-- 3 - عنوان الاستمارة -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ENREGISTREMENT DU VOYAGEUR"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="25dp"/>
+
+        <!-- 4 - إدخال اسم المسافر -->
+        <EditText
+            android:id="@+id/etNom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nom du voyageur"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:backgroundTint="#00E5FF"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- 5 - إدخال سنة الولادة -->
+        <EditText
+            android:id="@+id/etNaissance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Année de naissance (ex : 1990)"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:backgroundTint="#00E5FF"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- 6 - إدخال سنة الوجهة -->
+        <EditText
+            android:id="@+id/etDestination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Année de destination (ex : 2050)"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:backgroundTint="#00E5FF"
+            android:layout_marginBottom="25dp"/>
+
+        <!-- 7 - عنوان سبب السفر -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Motif du voyage"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- 8 - اختيار سبب السفر -->
+        <RadioGroup
+            android:id="@+id/rgMotif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbTourisme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tourisme"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#00E5FF"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/rbModification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Modification du passé"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#00E5FF"/>
+
+            <RadioButton
+                android:id="@+id/rbFuite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fuite"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#00E5FF"/>
+
+        </RadioGroup>
+
+        <!-- 9 - زر فحص ملف المسافر -->
+        <Button
+            android:id="@+id/btnInspecter"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="INSPECTER LE PROFIL"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#008CBA"
+            android:layout_marginTop="35dp"/>
+
+        <!-- 10 - معلومات أسفل الصفحة -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TEMPORAL BORDER CONTROL SYSTEM"
+            android:textColor="#78909C"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"/>
+
+    </LinearLayout>
+</ScrollView>
